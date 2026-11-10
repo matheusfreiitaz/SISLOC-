@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@source '../views';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+    .cartao { @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900; }
+    .rotulo { @apply mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300; }
+    .campo { @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100; }
+    .btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition; }
+    .btn-primario, .btn-neutro { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition; }
+    .btn-primario { @apply bg-orange-500 text-white hover:bg-orange-600 focus:ring-2 focus:ring-orange-500/40; }
+    .btn-neutro { @apply border border-slate-300 text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800; }
+    .erro { @apply mt-1 text-xs text-red-600 dark:text-red-400; }
+    .tabela { @apply w-full text-left text-sm; }
+    .tabela th { @apply border-b border-slate-200 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-slate-800; }
+    .tabela td { @apply border-b border-slate-100 px-3 py-3 dark:border-slate-800/60; }
+    .selo { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold text-white; }
+    .menu-item { @apply flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-orange-50 hover:text-orange-700 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-orange-400; }
+}
